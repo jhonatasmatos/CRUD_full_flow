@@ -20,7 +20,7 @@ export function Task({
 			key={id}
 			className='flex items-center justify-between px-4 w-[420px] h-12 rounded-sm mt-4 bg-[#BE1E2D]'
 		>
-			<button id='checkBtn' onClick={() => onChangeStatus(id)} className=''>
+			<button role='checkBtn' id='checkBtn' onClick={() => onChangeStatus(id)} className=''>
 				<Check className='text-white' weight='bold' />
 			</button>
 			<p
@@ -29,7 +29,7 @@ export function Task({
 			>
 				{content}
 			</p>
-			<button onClick={() => onDeleteTask(id)} type='button' title='Trash'>
+			<button role='deleteBtn' onClick={() => onDeleteTask(id)} type='button' title='Trash'>
 				<Trash id='deleteBtn' className='text-white' size={20} weight='bold' />
 			</button>
 		</div>

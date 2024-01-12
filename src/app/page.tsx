@@ -62,7 +62,7 @@ export default function Home() {
 					className='w-80 h-12 rounded-md border border-[#BE1E2D] p-4'
 					type='text'
 					placeholder='Add a new task'
-					id='inputTask'
+					data-testid='inputTask'
 					value={newTask}
 					onChange={handleNewTaskChange}
 				/>
@@ -77,13 +77,13 @@ export default function Home() {
 			<div className='flex w-[420px] justify-between mt-16'>
 				<div className='flex gap-2'>
 					<p>Tarefas criadas</p>
-					<span id='createdTasks' className='flex items-center justify-center'>
+					<span role='createdTasks' id='createdTasks' className='flex items-center justify-center'>
 						{tasks.length}
 					</span>
 				</div>
 				<div className='flex gap-2'>
 					<p>Concluídas</p>
-					<span id='tasksDone' className='flex items-center justify-center'>
+					<span role='tasksDone' id='tasksDone' className='flex items-center justify-center'>
 						{tasks.length === 0 ? (
 							0
 						) : (
